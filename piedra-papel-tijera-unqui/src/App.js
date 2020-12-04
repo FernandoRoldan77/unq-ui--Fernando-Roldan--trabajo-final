@@ -4,11 +4,21 @@ import Eleccion from './Eleccion';
 
 function App() {
 
-  const [eleccionDelJugador, setEleccionDelJugador] = useState("");
-  const [eleccionDeLaComputadora, setEleccionDeLaComputadora] = useState("");
+  const [eleccionDelJugador, setEleccionDelJugador] = useState({});
+  const [eleccionDeLaComputadora, setEleccionDeLaComputadora] = useState({});
 
   const elegirOpcionDeJugador =(event) =>{
-      setEleccionDelJugador(event.target.textContent);
+      const eleccionDelJugador = elecciones.find(e => e.eleccion === event.target.textContent);
+      setEleccionDelJugador(eleccionDelJugador);
+      eleccionesDeLaComputadora();
+  }
+
+  const eleccionesDeLaComputadora = () =>{
+    const eleccionComputadora = elecciones[Math.floor(Math.random() * elecciones.length)] ;
+
+    setEleccionDeLaComputadora(eleccionComputadora)
+
+
   }
   const elecciones = [
     {
@@ -43,9 +53,12 @@ function App() {
       <main>
         <section>
           <div className = "Jugador"> Jugador </div>
-          <div className= "eleccion">{eleccionDelJugador}</div>
+          <div className= "eleccion">{eleccionDelJugador.eleccion}</div>
         </section>
-        <section></section>
+        <section>
+         <div className = "Computadora"> Computadora</div>
+         <div className = "eleccion">{eleccionDeLaComputadora.eleccion}</div>
+        </section>
       
       </main>
       <div className = "elecciones">
