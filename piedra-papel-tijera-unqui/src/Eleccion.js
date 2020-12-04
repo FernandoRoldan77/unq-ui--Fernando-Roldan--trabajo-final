@@ -4,7 +4,7 @@ const Eleccion = (props) => {
 
     return (
 
-            <div className = "eleccion">
+            <div className = "eleccion" onClick={props.elijo}>
                 {props.valor.eleccion}
             </div>
     )

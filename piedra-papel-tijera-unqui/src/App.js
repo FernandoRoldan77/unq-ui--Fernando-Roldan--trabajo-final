@@ -1,56 +1,57 @@
-
+import React ,{useState} from 'react';
 import './App.css';
 import Eleccion from './Eleccion';
 
 function App() {
+
+  const [eleccionDelJugador, setEleccionDelJugador] = useState("");
+  const [eleccionDeLaComputadora, setEleccionDeLaComputadora] = useState("");
+
+  const elegirOpcionDeJugador =(event) =>{
+      setEleccionDelJugador(event.target.textContent);
+  }
   const elecciones = [
     {
       eleccion: "Tijera",
-      ganaContra:"Papel"
+      ganaContra:"Papel, Lagarto"
     },
-    {
-      eleccion: "Tijera",
-      ganaContra: "Lagarto"
-    },
+    
     {
       eleccion: "Papel",
-      ganaContra:"Piedra"
+      ganaContra:"Piedra, Spock"
     },
-    {
-      eleccion: "Papel",
-      ganaContra:"Spock"
-    },
+    
     {
       eleccion: "Piedra",
-      ganaContra:"Lagarto"
+      ganaContra:"Lagarto, Tijera"
     },
-    {
-      eleccion: "Piedra",
-      ganaContra:"Tijera"
-    },
+    
     {
       eleccion: "Lagarto",
-      ganaContra:"Spock"
+      ganaContra:"Spock, Papel"
     },
     {
-      eleccion: "Lagarto",
-      ganaContra:"Papel"
-    },
-    {
+
       eleccion: "Spock",
-      ganaContra:"Tijera"
+      ganaContra:"Tijera, Piedra"
     },
-    {
-      eleccion: "Spock",
-      ganaContra:"Piedra"
-    },
+
   ]
 
   return (
     <div className="App">
+      <main>
+        <section>
+          <div className = "Jugador"> Jugador </div>
+          <div className= "eleccion">{eleccionDelJugador}</div>
+        </section>
+        <section></section>
+      
+      </main>
       <div className = "elecciones">
         {
           elecciones.map((e,index) => <Eleccion 
+                                       elijo ={elegirOpcionDeJugador}
                                        valor ={elecciones[index]}
                                       />)
         }
