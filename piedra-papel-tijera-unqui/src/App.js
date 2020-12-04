@@ -1,6 +1,7 @@
 import React ,{useState} from 'react';
 import './App.css';
 import Eleccion from './Eleccion';
+import Resultado from './Resultado';
 
 function App() {
 
@@ -49,7 +50,9 @@ function App() {
   ]
 
   return (
+
     <div className="App">
+      <Resultado jugador = {eleccionDelJugador} computadora={eleccionesDeLaComputadora}/>
       <main>
         <section>
           <div className = "Jugador"> Jugador </div>
@@ -59,7 +62,6 @@ function App() {
          <div className = "Computadora"> Computadora</div>
          <div className = "eleccion">{eleccionDeLaComputadora.eleccion}</div>
         </section>
-      
       </main>
       <div className = "elecciones">
         {
