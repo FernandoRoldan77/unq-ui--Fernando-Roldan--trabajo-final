@@ -8,7 +8,7 @@ function App() {
   const [eleccionDelJugador, setEleccionDelJugador] = useState({});
   const [eleccionDeLaComputadora, setEleccionDeLaComputadora] = useState({});
 
-  const elegirOpcionDeJugador =(event) =>{
+  const elegirOpcionDeJugador = (event) =>{
       const eleccionDelJugador = elecciones.find(e => e.eleccion === event.target.textContent);
       setEleccionDelJugador(eleccionDelJugador);
       eleccionesDeLaComputadora();
@@ -17,7 +17,7 @@ function App() {
   const eleccionesDeLaComputadora = () =>{
     const eleccionComputadora = elecciones[Math.floor(Math.random() * elecciones.length)] ;
 
-    setEleccionDeLaComputadora(eleccionComputadora)
+    setEleccionDeLaComputadora(eleccionComputadora);
 
 
   }
@@ -52,14 +52,16 @@ function App() {
   return (
 
     <div className="App">
-      <Resultado jugador = {eleccionDelJugador} computadora={eleccionesDeLaComputadora}/>
+       
+     
       <main>
+      <Resultado jugador = {eleccionDelJugador} computadora= {eleccionDeLaComputadora}/> 
         <section>
-          <div className = "Jugador"> Jugador </div>
+          <div className = "jugador"> Jugador </div>
           <div className= "eleccion">{eleccionDelJugador.eleccion}</div>
         </section>
         <section>
-         <div className = "Computadora"> Computadora</div>
+         <div className = "computadora"> Computadora</div>
          <div className = "eleccion">{eleccionDeLaComputadora.eleccion}</div>
         </section>
       </main>
@@ -70,6 +72,7 @@ function App() {
                                        valor ={elecciones[index]}
                                       />)
         }
+        
       </div>
     </div>
   );

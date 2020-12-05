@@ -1,16 +1,26 @@
 .elecciones {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
-  justify-content: center;
+  grid-template-columns: auto auto auto ;
+  justify-items: center;
+  
 }
 
 .eleccion {
+
 font-size: 40px;
-border: 1px solid black;
-border-radius: 40%;
-padding: 50px;
-padding-top: 50px;
+font-family: Arial, Helvetica, sans-serif;
+/* border: 1px solid black; */
+/* border-radius: 40%; */
+border-style: solid;
+padding: 60px;
+padding-top: 60px;
 cursor: pointer;
 
 
 } 
+
+/* .resultado{
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+} */

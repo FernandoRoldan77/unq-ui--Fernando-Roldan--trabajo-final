@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Eleccion = (props) => {
 
@@ -10,4 +10,4 @@ const Eleccion = (props) => {
     )
 }
 
-export default Eleccion
+export default Eleccion;
