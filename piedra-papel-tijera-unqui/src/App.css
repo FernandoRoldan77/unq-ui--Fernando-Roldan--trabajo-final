@@ -19,8 +19,9 @@ cursor: pointer;
 
 } 
 
-/* .resultado{
-  display: grid;
+
+.resultado{
+  display: contents;
   grid-template-columns: auto;
   justify-content: center;
-} */
+} 

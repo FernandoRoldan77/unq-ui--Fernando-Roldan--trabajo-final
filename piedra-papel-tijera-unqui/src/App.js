@@ -5,8 +5,8 @@ import Resultado from './Resultado';
 
 function App() {
 
-  const [eleccionDelJugador, setEleccionDelJugador] = useState({});
-  const [eleccionDeLaComputadora, setEleccionDeLaComputadora] = useState({});
+  const [eleccionDelJugador, setEleccionDelJugador] = useState( {eleccion: "", ganaContra:[]});
+  const [eleccionDeLaComputadora, setEleccionDeLaComputadora] = useState( {eleccion: "", ganaContra:[]});
 
   const elegirOpcionDeJugador = (event) =>{
       const eleccionDelJugador = elecciones.find(e => e.eleccion === event.target.textContent);
@@ -24,27 +24,27 @@ function App() {
   const elecciones = [
     {
       eleccion: "Tijera",
-      ganaContra:"Papel, Lagarto"
+      ganaContra:["Papel" ,"Lagarto"]
     },
     
     {
       eleccion: "Papel",
-      ganaContra:"Piedra, Spock"
+      ganaContra:["Piedra", "Spock"]
     },
     
     {
       eleccion: "Piedra",
-      ganaContra:"Lagarto, Tijera"
+      ganaContra:["Lagarto", "Tijera"]
     },
     
     {
       eleccion: "Lagarto",
-      ganaContra:"Spock, Papel"
+      ganaContra:["Spock", "Papel"]
     },
     {
 
       eleccion: "Spock",
-      ganaContra:"Tijera, Piedra"
+      ganaContra:["Tijera", "Piedra"]
     },
 
   ]
