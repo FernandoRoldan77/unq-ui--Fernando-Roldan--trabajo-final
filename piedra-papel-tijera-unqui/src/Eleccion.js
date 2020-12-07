@@ -6,6 +6,10 @@ const Eleccion = (props) => {
 
             <div className = "eleccion" onClick={props.elijo}>
                 {props.valor.eleccion}
+                 <img className={props.urlImagen === "tijera"}
+                  src={props.valor.urlImagen} alt="tijera" onClick ={props.valor.eleccion}>
+               
+                </img> 
             </div>
     )
 }

@@ -2,6 +2,12 @@ import React ,{useState} from 'react';
 import './App.css';
 import Eleccion from './Eleccion';
 import Resultado from './Resultado';
+import tijera from '../src/imagenes/tijera.png'
+import papel from '../src/imagenes/papel.png'
+import piedra from '../src/imagenes/piedra.png'
+import spock from '../src/imagenes/spock.png'
+import lagarto from '../src/imagenes/lagartija.png'
+
 
 function App() {
 
@@ -24,27 +30,33 @@ function App() {
   const elecciones = [
     {
       eleccion: "Tijera",
-      ganaContra:["Papel" ,"Lagarto"]
+      ganaContra:["Papel" ,"Lagarto"],
+      urlImagen: tijera
+      
     },
     
     {
       eleccion: "Papel",
-      ganaContra:["Piedra", "Spock"]
+      ganaContra:["Piedra", "Spock"],
+      urlImagen: papel
     },
     
     {
       eleccion: "Piedra",
-      ganaContra:["Lagarto", "Tijera"]
+      ganaContra:["Lagarto", "Tijera"],
+      urlImagen: piedra
     },
     
     {
       eleccion: "Lagarto",
-      ganaContra:["Spock", "Papel"]
+      ganaContra:["Spock", "Papel"],
+      urlImagen: lagarto
     },
     {
 
       eleccion: "Spock",
-      ganaContra:["Tijera", "Piedra"]
+      ganaContra:["Tijera", "Piedra"],
+      urlImagen: spock
     },
 
   ]
@@ -55,7 +67,7 @@ function App() {
        
      
       <main>
-      <Resultado jugador = {eleccionDelJugador} computadora= {eleccionDeLaComputadora}/> 
+     
         <section>
           <div className = "jugador"> Jugador </div>
           <div className= "eleccion">{eleccionDelJugador.eleccion}</div>
@@ -64,6 +76,7 @@ function App() {
          <div className = "computadora"> Computadora</div>
          <div className = "eleccion">{eleccionDeLaComputadora.eleccion}</div>
         </section>
+        <Resultado jugador = {eleccionDelJugador} computadora= {eleccionDeLaComputadora}/> 
       </main>
       <div className = "elecciones">
         {
