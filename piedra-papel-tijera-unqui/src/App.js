@@ -80,15 +80,16 @@ function App() {
             }
 
           </div>
+          
+          <section className = "sectionEleccionesDeRivales">
+          <div className="jugador"> Jugador/a eligio: {eleccionDelJugador.eleccion} </div>
+          <div className="computadora"> Computadora eligio: {eleccionDeLaComputadora.eleccion}</div>
+          </section>
           <div className = "resultado"  >
           <Resultado jugador={eleccionDelJugador} computadora={eleccionDeLaComputadora} />
           </div>
           </section>
        
-            <section className = "sectionEleccionesDeRivales">
-          <div className="jugador"> Jugador/a eligio: {eleccionDelJugador.eleccion} </div>
-          <div className="computadora"> Computadora eligio: {eleccionDeLaComputadora.eleccion}</div>
-          </section>
       </main>
 
     </div>
