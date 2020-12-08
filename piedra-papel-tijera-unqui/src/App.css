@@ -1,37 +1,58 @@
-.App{
+  .App{
   display: grid;
-  grid-template-columns: auto auto auto; 
-   
-  /* background-image: url("../src/imagenes/todasLasElecciones.png");  */
- background-color: lightblue
- ;
+  grid-area: auto;
 }
 
-.elecciones {
-  display: grid;
-  grid-template-columns: auto auto auto ;
-  justify-items: center;
-  
-}
+.titulo{
+
+padding: 1em;
+margin-bottom: 2em;
+background-color: rgb(26, 192, 164);
+color: #fff; 
+ }
 
 .eleccion {
-
+display: contents;
 font-size: 40px;
 font-family: Arial, Helvetica, sans-serif;
-/* border: 1px solid black; */
-/* border-radius: 40%; */
-border-style: solid;
 padding: 60px;
+padding-left: 60px;
 padding-top: 60px;
-cursor: pointer;
 
 
+}  
+ .elecciones {
+ 
+  border-radius: 5px;
+  justify-items: center;
+  
+} 
+ .resultado{
+  
+ 
+  padding: 1em;
+  border-radius: 50px;
+  margin-bottom: 1em;
+  background-color: rgb(26, 192, 164);
+  color: #fff; 
+ }
+
+
+.jugador{
+
+justify-content: center;
+align-items: baseline;
+padding: 1em;
+margin-bottom: 2em;
+background-color: rgb(192, 59, 26);
+color: #fff;
 } 
 
-
-/* .resultado{
-  display: contents;
-  grid-template-columns: auto;
-  justify-content: right;
-}  */
+ .computadora{
+  
+padding: 1em;
+margin-bottom: 2em;
+background-color: rgb(87, 192, 26);
+color: #fff;
+} 
 

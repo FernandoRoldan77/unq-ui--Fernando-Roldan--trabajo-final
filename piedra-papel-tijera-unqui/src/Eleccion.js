@@ -4,10 +4,10 @@ const Eleccion = (props) => {
 
     return (
 
-            <div className = "eleccion" onClick={props.elijo}>
+            <div className = "eleccion">
                 {props.valor.eleccion}
-                 <img className={props.urlImagen === "tijera"}
-                  src={props.valor.urlImagen} alt="tijera" onClick ={props.valor.eleccion}>
+                 <img 
+                  src={props.valor.urlImagen}  alt= {props.valor.eleccion} onClick ={props.elijo}>
                
                 </img> 
             </div>
