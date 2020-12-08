@@ -16,7 +16,7 @@ function App() {
   const [eleccionDeLaComputadora, setEleccionDeLaComputadora] = useState({ eleccion: "", ganaContra: [] });
 
   const elegirOpcionDeJugador = (event) => {
-    
+  
     const eleccionDelJugador = elecciones.find(e => e.eleccion === event.target.alt);
     setEleccionDelJugador(eleccionDelJugador);
     eleccionesDeLaComputadora();
@@ -68,7 +68,8 @@ function App() {
     <div className="App">
 
       <main>
-        <section>
+     
+        <section className = "sectionTituloYResultado">
         <Titulo />
         <div className="elecciones">
             {
@@ -79,22 +80,14 @@ function App() {
             }
 
           </div>
-          
-          <div className="jugador"> Eleccion del Jugador </div>
-          <div className="eleccion">{eleccionDelJugador.eleccion} </div>
-            
-          <div className="computadora"> Eleccion de la Computadora</div>
-          <div className="eleccion">{eleccionDeLaComputadora.eleccion}</div>
-
-        </section>
-        <section>
-          <div className = "resultado">
-          <Resultado  jugador={eleccionDelJugador} computadora={eleccionDeLaComputadora} />
+          <div className = "resultado"  >
+          <Resultado jugador={eleccionDelJugador} computadora={eleccionDeLaComputadora} />
           </div>
           </section>
-          <section>
-          
-     
+       
+            <section className = "sectionEleccionesDeRivales">
+          <div className="jugador"> Jugador/a eligio: {eleccionDelJugador.eleccion} </div>
+          <div className="computadora"> Computadora eligio: {eleccionDeLaComputadora.eleccion}</div>
           </section>
       </main>
 

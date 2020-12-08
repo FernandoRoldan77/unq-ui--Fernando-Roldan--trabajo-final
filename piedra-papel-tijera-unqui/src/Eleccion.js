@@ -6,7 +6,7 @@ const Eleccion = (props) => {
 
             <div className = "eleccion">
                 {props.valor.eleccion}
-                 <img 
+                 <img
                   src={props.valor.urlImagen}  alt= {props.valor.eleccion} onClick ={props.elijo}>
                
                 </img> 
